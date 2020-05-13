@@ -1,20 +1,20 @@
-package com.example.demo;
+package com.example.eurcdemo;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
-import org.springframework.context.annotation.ComponentScan;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
 @RestController
 @EnableDiscoveryClient
 @SpringBootApplication
-public class DemoApplication {
+public class EurekaClientApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(DemoApplication.class, args);
+		SpringApplication.run(EurekaClientApplication.class, args);
 	}
+
 	@RequestMapping(value = "/available")
 	public String available() {
 		return "This is available response";
